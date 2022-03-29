@@ -16,4 +16,6 @@ int main()
 
     c.attack(b.getName());
     b.takeDamage(c.getAttackDamage());
+
+    a.guardGate();
 }
