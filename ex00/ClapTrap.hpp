@@ -6,12 +6,9 @@ class ClapTrap
 {
 public:
     ClapTrap();
-
     ClapTrap(const std::string& name);
-
     ClapTrap(const ClapTrap& that);
-
-    ~ClapTrap();
+    virtual ~ClapTrap();
 
     void swap(ClapTrap& that);
 
@@ -32,6 +29,10 @@ public:
     void setHitPoints(unsigned int value);
     void setEnergyPoints(unsigned int value);
     void setAttackDamage(unsigned int value);
+
+    static const int HIT_POINTS = 10;
+    static const int ENERGY_POINTS = 10;
+    static const int ATTACK_DAMAGE = 0;
 
 private:
     std::string name;

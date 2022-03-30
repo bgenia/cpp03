@@ -5,18 +5,18 @@
 FragTrap::FragTrap()
 {
     LOG_CTOR_A(getName());
-    setHitPoints(100);
-    setEnergyPoints(100);
-    setAttackDamage(30);
+    setHitPoints(HIT_POINTS);
+    setEnergyPoints(ENERGY_POINTS);
+    setAttackDamage(ATTACK_DAMAGE);
 }
 
 FragTrap::FragTrap(const std::string& name)
     : ClapTrap(name)
 {
     LOG_CTOR_A(getName());
-    setHitPoints(100);
-    setEnergyPoints(100);
-    setAttackDamage(30);
+    setHitPoints(HIT_POINTS);
+    setEnergyPoints(ENERGY_POINTS);
+    setAttackDamage(ATTACK_DAMAGE);
 }
 
 FragTrap::FragTrap(const FragTrap& that)

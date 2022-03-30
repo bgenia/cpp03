@@ -5,18 +5,18 @@
 ScavTrap::ScavTrap()
 {
     LOG_CTOR_A(getName());
-    setHitPoints(100);
-    setEnergyPoints(50);
-    setAttackDamage(20);
+    setHitPoints(HIT_POINTS);
+    setEnergyPoints(ENERGY_POINTS);
+    setAttackDamage(ATTACK_DAMAGE);
 }
 
 ScavTrap::ScavTrap(const std::string& name)
     : ClapTrap(name)
 {
     LOG_CTOR_A(getName());
-    setHitPoints(100);
-    setEnergyPoints(50);
-    setAttackDamage(20);
+    setHitPoints(HIT_POINTS);
+    setEnergyPoints(ENERGY_POINTS);
+    setAttackDamage(ATTACK_DAMAGE);
 }
 
 ScavTrap::ScavTrap(const ScavTrap& that)

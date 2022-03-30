@@ -6,18 +6,18 @@
 
 ClapTrap::ClapTrap()
     : name("Стас (клон)"),
-      hitPoints(10),
-      energyPoints(10),
-      attackDamage(0)
+      hitPoints(HIT_POINTS),
+      energyPoints(ENERGY_POINTS),
+      attackDamage(ATTACK_DAMAGE)
 {
     LOG_CTOR_A(name);
 }
 
 ClapTrap::ClapTrap(const std::string& name)
     : name(name),
-      hitPoints(10),
-      energyPoints(10),
-      attackDamage(0)
+      hitPoints(HIT_POINTS),
+      energyPoints(ENERGY_POINTS),
+      attackDamage(ATTACK_DAMAGE)
 {
     LOG_CTOR_A(name);
 }
@@ -38,6 +38,7 @@ ClapTrap::~ClapTrap()
 
 void ClapTrap::swap(ClapTrap& that)
 {
+    LOG_METHOD_A(name << " <-> " << that.name);
     name.swap(that.name);
     swapInts(hitPoints, that.hitPoints);
     swapInts(energyPoints, that.energyPoints);
@@ -46,6 +47,7 @@ void ClapTrap::swap(ClapTrap& that)
 
 ClapTrap& ClapTrap::operator=(ClapTrap that)
 {
+    LOG_COPY_ASGN_A(name << " = " << that.name);
     swap(that);
     return *this;
 }
